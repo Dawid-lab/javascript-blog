@@ -1,0 +1,5 @@
+1.nowe repo
+2.clon
+3.skopiowanmy plik package.json i .gitignore
+4.zainicjowanie npm run init-project
+5.pierwszy commit
