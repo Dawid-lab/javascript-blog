@@ -2,4 +2,5 @@
 2.clon
 3.skopiowanmy plik package.json i .gitignore
 4.zainicjowanie npm run init-project
-5.pierwszy commit
+5.jak nie ma to instalacja https://nodejs.org/dist/latest-v10.x/
+6.pierwszy commit
