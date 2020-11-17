@@ -8,7 +8,7 @@
     console.log('Link was clicked!');
     console.log(event);
     /* remove class 'active' from all article links -  usuń klasę „aktywną” ze wszystkich linków do artykułów  */
-const activeLinks = document.querySelectorAll('.titles a.article');
+  const activeLinks = document.querySelectorAll('.titles a.active');
     for(let activeLink of activeLinks){
     activeLink.classList.remove('active');
   }
@@ -16,9 +16,9 @@ const activeLinks = document.querySelectorAll('.titles a.article');
     /* add class 'active' to the clicked link */
   
     /* remove class 'active' from all articles -usuń klasę „aktywna” ze wszystkich artykułów*/
-    const activeArticles = document.querySelectorAll('article.active');
+  const activeArticles = document.querySelectorAll('article.active');
     for(let activeArticle of activeArticles){
-      activeArticle.classList.remove('active');
+    activeArticle.classList.remove('active');
   
     /* get 'href' attribute from the clicked link */
   
@@ -28,8 +28,6 @@ const activeLinks = document.querySelectorAll('.titles a.article');
   }
   
   const links = document.querySelectorAll('.titles a');
-  
-  for(let link of links){
-    link.addEventListener('click', titleClickHandler);
-    
+    for(let link of links){
+    link.addEventListener('click', titleClickHandler);  
   }
