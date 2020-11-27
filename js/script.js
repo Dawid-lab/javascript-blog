@@ -28,3 +28,31 @@
     for(let link of links){
       link.addEventListener('click', titleClickHandler);  
   }
+
+
+  const optArticleSelector = '.post',
+  optTitleSelector = '.post-title',
+  optTitleListSelector = '.titles';
+
+function generateTitleLinks(){
+
+  /* remove contents of titleList usuń zawartość listy tytułów*/
+  querySelector(optTitleListSelector);
+  for(let titleList of optTitleListSelector){
+    titleList.classList.remove(optTitleListSelector);
+  }
+  /* for each article dla każdego artykułu */
+
+    /* get the article id pobierz identyfikator artykułu */
+
+    /* find the title element znajdź element tytułu */
+
+    /* get the title from the title element pobierz tytuł z elementu title */
+
+    /* create HTML of the link utwórz HTML linku */
+
+    /* insert link into titleList wstaw link do listy tytułów*/
+
+}
+
+generateTitleLinks();
