@@ -37,20 +37,25 @@
 function generateTitleLinks(){
 
   /* remove contents of titleList usuń zawartość listy tytułów*/
-  querySelector(optTitleListSelector);
-  for(let titleList of optTitleListSelector){
-    titleList.classList.remove(optTitleListSelector);
-  }
-  /* for each article dla każdego artykułu */
+ 
+  const titleList = document.querySelector(optTitleListSelector); /*  Znaleziony element zapisujemy w nowo zadeklarowanej stałej titleList */
+  titleList.innerHTML = 'asasas' /* zmieniamy na pusty ciąg znaków */
 
+  const articles = document.querySelectorAll(optTitleListSelector);
+/* for each article dla każdego artykułu */
+    for(let article of articles ){
+
+  
     /* get the article id pobierz identyfikator artykułu */
-
+  const articleId = article.getAttribute('id');
+  console.log('articleId');
     /* find the title element znajdź element tytułu */
-
+    const articleTitle = article.querySelector(optTitleSelector).innerHTML;
+    console.log('articleId'); 
     /* get the title from the title element pobierz tytuł z elementu title */
 
     /* create HTML of the link utwórz HTML linku */
-
+  }
     /* insert link into titleList wstaw link do listy tytułów*/
 
 }
