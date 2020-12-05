@@ -43,15 +43,15 @@ function generateTitleLinks(){
   for(let article of articles){
     /* get the article id pobierz identyfikator artykułu */
     const articleId = article.getAttribute('id');
-    console.log('articleId', 'articleID') 
+    console.log('articleId', articleId); 
     /* find the title element znajdź element tytułu */
     const articleTitleElement = article.querySelector(optTitleSelector);
-    console.log('articleTitle', 'articleTitle')
+    console.log('articleTitle', articleTitle);
     /* get the title from the title element pobierz tytuł z elementu title */
     const articleTitle = articleTitleElement.innerHTML;
     /* create HTML of the link utwórz HTML linku */
     const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
-    console.log('linkHTML', 'linkHTML')
+    console.log('linkHTML', linkHTML)
     /* insert link into titleList wstaw link do listy tytułów*/
    titleList.innerHTML = titleList.innerHTML + linkHTML;
   }
