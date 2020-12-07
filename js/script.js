@@ -9,12 +9,12 @@
     console.log(event);
 
     const clickedElement = this;
-   
+
     const activeLinks = document.querySelectorAll('.titles a.active'); /* remove class 'active' from all article links -  usuń klasę „aktywną” ze wszystkich linków do artykułów  */
     for(let activeLink of activeLinks){
       activeLink.classList.remove('active');
     }
-    clickedElement.classList.add('active');  /* add class 'active' to the clicked link */    
+    clickedElement.classList.add('active');  /* add class 'active' to the clicked link */
     const activeArticles = document.querySelectorAll('.post.active'); /* remove class 'active' from all articles -usuń klasę „aktywna” ze wszystkich artykułów*/
     for(let activeArticle of activeArticles){
       activeArticle.classList.remove('active');
@@ -22,8 +22,8 @@
     const targetArticleId = clickedElement.getAttribute('href'); /* get 'href' attribute from the clicked link */
     const targetArticle = document.querySelector(targetArticleId); /* find the correct article using the selector (value of 'href' attribute) */
     targetArticle.classList.add('active'); /* add class 'active' to the correct article */
-  } 
-    
+  }
+
 
 
 
@@ -34,7 +34,7 @@
 function generateTitleLinks(){
 
   /* remove contents of titleList usuń zawartość listy tytułów*/
- 
+
   const titleList = document.querySelector(optTitleListSelector); /*  Znaleziony element zapisujemy w nowo zadeklarowanej stałej titleList */
   titleList.innerHTML = '' /* zmieniamy na pusty ciąg znaków */
 
@@ -43,12 +43,13 @@ function generateTitleLinks(){
   for(let article of articles){
     /* get the article id pobierz identyfikator artykułu */
     const articleId = article.getAttribute('id');
-    console.log('articleId', articleId); 
+    console.log('articleId', articleId);
     /* find the title element znajdź element tytułu */
     const articleTitleElement = article.querySelector(optTitleSelector);
-    console.log('articleTitle', articleTitle);
+
     /* get the title from the title element pobierz tytuł z elementu title */
     const articleTitle = articleTitleElement.innerHTML;
+    console.log('articleTitle', articleTitle);
     /* create HTML of the link utwórz HTML linku */
     const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
     console.log('linkHTML', linkHTML)
@@ -57,9 +58,12 @@ function generateTitleLinks(){
   }
   const links = document.querySelectorAll('.titles a');
   console.log(links);
-    for(let link of links){
-      link.addEventListener('click', titleClickHandler);  
+           for(let link of links){
+      link.addEventListener('click', titleClickHandler);
   }
 }
 
 generateTitleLinks();
+
+
+
